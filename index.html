@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>METRO Ticket</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="phone">
+    <header class="header">
+      <button type="button" class="back" aria-label="Back">Back</button>
+      <h1 class="title">Ticket</h1>
+    </header>
+
+    <section class="brand">METRO</section>
+
+    <main id="ticket" class="ticket ticket--blue" role="button" tabindex="0" aria-label="Toggle ticket color">
+      <div id="icons" class="icons" aria-hidden="true"></div>
+      <p class="fare">ADULT ($3.00)</p>
+    </main>
+
+    <footer class="expire">
+      <p id="expire-time" class="expire-time"></p>
+      <p class="expire-label">Expiration Date &amp; Time</p>
+    </footer>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,166 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background: #111;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  -webkit-font-smoothing: antialiased;
+}
+
+.phone {
+  width: 100%;
+  max-width: 430px;
+  min-height: 100%;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  overflow: hidden;
+}
+
+.header {
+  position: relative;
+  flex: 0 0 auto;
+  background: #234597;
+  color: #fff;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 16px;
+  padding-top: env(safe-area-inset-top);
+}
+
+.back {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-top: calc(env(safe-area-inset-top) / 2);
+  background: none;
+  border: none;
+  color: #fff;
+  font: inherit;
+  font-size: 17px;
+  font-weight: 400;
+  cursor: pointer;
+  padding: 0;
+}
+
+.title {
+  font-size: 17px;
+  font-weight: 600;
+  letter-spacing: -0.2px;
+}
+
+.brand {
+  flex: 0 0 auto;
+  background: #ffc04d;
+  color: #fff;
+  text-align: center;
+  font-size: clamp(42px, 12vw, 56px);
+  font-weight: 800;
+  letter-spacing: 1px;
+  line-height: 1;
+  padding: 28px 12px 32px;
+}
+
+.ticket {
+  position: relative;
+  flex: 1 1 auto;
+  min-height: 280px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  user-select: none;
+  overflow: hidden;
+  outline: none;
+  transition: background-color 0.15s ease;
+}
+
+.ticket--blue {
+  background: #4aa3e8;
+}
+
+.ticket--green {
+  background: #39ff70;
+}
+
+.fare {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  font-size: clamp(28px, 8vw, 36px);
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  text-align: center;
+  pointer-events: none;
+}
+
+.icons {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.float-icon {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  opacity: 0.32;
+  color: #fff;
+  will-change: transform;
+}
+
+.float-icon .x {
+  font-size: 1.35em;
+  font-weight: 400;
+  line-height: 1;
+  font-family: Arial, Helvetica, sans-serif;
+  letter-spacing: 0;
+}
+
+.float-icon svg {
+  display: block;
+  width: 1.3em;
+  height: 1.1em;
+  fill: currentColor;
+}
+
+.expire {
+  flex: 0 0 auto;
+  background: #ffc04d;
+  color: #fff;
+  text-align: center;
+  padding: 22px 12px 28px;
+  padding-bottom: max(28px, env(safe-area-inset-bottom));
+}
+
+.expire-time {
+  font-size: clamp(22px, 6.5vw, 28px);
+  font-weight: 700;
+  letter-spacing: 0.2px;
+}
+
+.expire-label {
+  margin-top: 6px;
+  font-size: clamp(14px, 4vw, 17px);
+  font-weight: 600;
+}
